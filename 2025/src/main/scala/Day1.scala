@@ -42,7 +42,7 @@ def clicks(lines: List[String]): List[Int] = {
   }
 }
 
-@main def main(): Unit = {
+@main def day1main(): Unit = {
   val lines = ListBuffer.empty[String]
   var line = StdIn.readLine()
   while (line != null) {
