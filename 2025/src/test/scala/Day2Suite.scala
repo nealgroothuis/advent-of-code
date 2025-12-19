@@ -24,11 +24,19 @@ class Day2Suite extends munit.FunSuite {
     assertEquals(decimalDigits(1234), List(1, 2, 3, 4))
   }
 
-  test("isValidId") {
-    assertEquals(isValidId(55), false)
-    assertEquals(isValidId(6464), false)
-    assertEquals(isValidId(123123), false)
-    assertEquals(isValidId(101), true)
+  test("isInvalidId") {
+    assertEquals(isInvalidId(55), true)
+    assertEquals(isInvalidId(6464), true)
+    assertEquals(isInvalidId(123123), true)
+    assertEquals(isInvalidId(101), false)
+  }
+
+  test("isInvalidIdPart2") {
+    assertEquals(isInvalidIdPart2(55), true)
+    assertEquals(isInvalidIdPart2(6464), true)
+    assertEquals(isInvalidIdPart2(123123), true)
+    assertEquals(isInvalidIdPart2(101), false)
+    assertEquals(isInvalidIdPart2(101101101), true)
   }
 
   test("ProductIdRange.invalidIds") {
